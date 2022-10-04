@@ -2,6 +2,12 @@
 
 This project was for showing Top 10 cryptocurrency exchanges using Coingecko public API( [https://www.coingecko.com/en/api](https://www.coingecko.com/en/api) ).
 
+## Prerequisites
+
+#### `npm init`
+
+Before starting the project, setup the dependencies.
+
 ## Run
 
 In the project directory, you can run:
