@@ -3,8 +3,6 @@ import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom"
 
 import { useCryptoContext } from "../utils/store";
-import { Info } from "../types"
-import { flexbox } from "@mui/system";
 
 export const Detail = () => {
 

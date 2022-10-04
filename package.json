@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "concurrently \"npm run start\" --restart-after 2000 \"cypress run --browser chrome\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,6 +45,8 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.7",
+    "concurrently": "^7.4.0",
+    "cypress": "^10.9.0",
     "react-router-dom": "^6.4.1"
   }
 }

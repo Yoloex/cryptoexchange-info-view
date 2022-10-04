@@ -10,7 +10,7 @@ const apiURL = "https://api.coingecko.com/api/v3/exchanges";
 
 export const Main = (props: any) => {
     const navigate = useNavigate();
-    const {details, setDetails} = useCryptoContext()
+    const { details, setDetails } = useCryptoContext()
 
     const fetchData = useCallback((url: string): void => {
         try {
@@ -20,7 +20,7 @@ export const Main = (props: any) => {
         } catch (err) {
             console.log(err);
         }
-    }, []);
+    }, [setDetails]);
 
     const handleRowClick = (id: string) => {
         navigate(`/tableDetail?currencyId=${id}`)
@@ -28,7 +28,7 @@ export const Main = (props: any) => {
 
     useEffect(() => {
         fetchData(apiURL);
-    });
+    }, [fetchData]);
 
     return (
         <Grid xs={12} md={6} sm={2}>
